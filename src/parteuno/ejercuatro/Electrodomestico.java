@@ -3,7 +3,7 @@ package parteuno.ejercuatro;
 public class Electrodomestico {
 
 	enum Color {
-		BLANCO, NEGRO, ROOJO, AZUL ,GRIS
+		BLANCO, NEGRO, ROJO, AZUL ,GRIS
 	}
 	enum ConsumoEnergetico {
 		A ,B ,C ,D ,E ,F
@@ -44,6 +44,10 @@ public class Electrodomestico {
 	public double getPrecioBase() {
 		return precioBase;
 	}
+	
+	public void setPrecioBase(double precio) {
+		this.precioBase = (int) precio;
+	}
 
 	public double getPeso() {
 		return peso;
@@ -53,7 +57,7 @@ public class Electrodomestico {
 		color = color.toUpperCase();
 		switch (color) {
 		case "BLANCO", "NEGRO", "ROJO", "AZUL", "GRIS" -> {
-			this.color = Color.valueOf(color);
+			this.color = Color.valueOf(color.toUpperCase());
 		}
 		}
 	}
