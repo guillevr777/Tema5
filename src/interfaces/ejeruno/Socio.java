@@ -1,6 +1,6 @@
 package interfaces.ejeruno;
 
-public class Socio {
+public class Socio implements Comparable<Socio> {
 
 	private int id;
 	private String nombre;
@@ -12,7 +12,13 @@ public class Socio {
 		this.edad = edad;
 	}
 	
-	public String toStrng () {
-		return "";
+	@Override
+	public String toString () {
+		return this.id + " " + this.nombre + " " + this.edad;
 	}
+	
+	@Override
+	public int compareTo(Socio otro) {
+        return Integer.compare(this.id, otro.id);
+    }
 }
