@@ -1,14 +1,19 @@
 package parteuno.ejercinco;
 
-public class Poligono {
+ abstract class Poligono {
 
 	private int numLados;
 	
-	public void area (int numLados) {
+	public Poligono (int lados) {
 		this.numLados = numLados;
 	}
 	
+	public void area (int numLados) {
+
+	}
+	
 	public String toString () {
-		return "";
+		String frase = "";
+		return frase;
 	}
 }
