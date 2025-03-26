@@ -15,7 +15,7 @@ abstract AnimalDomestico implements Animal
 	heredados:
 		+ void comer();
 		+ void dormir();
-		+ abstract hacerRuido();
+		+ abstract void hacerRuido();
 		
 Perro extends AnimalDomestico
 	+ sacarPaseo()
