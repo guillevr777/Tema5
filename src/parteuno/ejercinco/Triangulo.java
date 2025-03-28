@@ -20,7 +20,12 @@ public class Triangulo extends Poligono{
 	}
 	
 	public String toString () {
-		String frase = super.toString() + " Area : " + area();
+		String frase;
+		if (Double.isNaN(area())) {
+		 frase = super.toString() + " Area : 0";
+		} else {
+		 frase = super.toString() + " Area : " + area();
+		}
 		return frase;
 	}
 }

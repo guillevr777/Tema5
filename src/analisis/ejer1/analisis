@@ -1,0 +1,24 @@
+class vehiculo
+
+ -String marca
+ -String modelo
+ -String motor
+ -String matricula
+ -boolean encendido
+ -int marcha
+ -int velocidad
+ 
+ class turismo extends vehiculo
+ 
+ -enum Uso {PROFESIONAL, PARTICULAR}
+ -tipoUso uso
+ 
+ class camion extends vehiculo
+ 
+ -double pesoMaximo
+ -boolean mercanciaPeligrosa
+ 
+ class motocicleta extends vehiculo
+ 
+ -int cilindrada
+ -
