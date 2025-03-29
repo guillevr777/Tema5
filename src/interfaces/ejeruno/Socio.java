@@ -19,6 +19,6 @@ public class Socio implements Comparable<Socio> {
 	
 	@Override
 	public int compareTo(Socio otro) {
-        return Integer.compare(this.id, otro.id);
+		return Integer.compare(this.id, otro.id);
     }
 }

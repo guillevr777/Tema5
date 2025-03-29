@@ -17,7 +17,7 @@ public class Futbolista implements Comparable<Futbolista>{
 	}
 	
 	public String toString () {
-		return "";
+		return this.númeroCamiseta + " " + this.nombre + " " + this.edad + " " + this.númeroGoles;
 	}
 	
 	public boolean equals (Object obj) {

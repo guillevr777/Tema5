@@ -1,12 +1,14 @@
 package interfaces.ejeruno;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Principal {
 
 	public static void main(String[] args) {
 
-		ArrayList<Socio> socios = new ArrayList<Socio>();
+		List<Socio> socios = new ArrayList<Socio>();
 		Socio otro1 = new Socio(1,"Guillermo",21);
 		Socio otro2 = new Socio(2,"Elena",19);
 		Socio otro3 = new Socio(5,"Ivan",19);
@@ -20,18 +22,9 @@ public class Principal {
 		socios.add(otro3);
 		socios.add(otro5);
 		
-		comparador (otro1,otro2);
-		comparador (otro2,otro1);
-		comparador (otro1,otro1);
-
-		System.out.println(otro1 + "\n" + otro2);
+		comparador(otro1,otro2);
 		
-		for (Socio a : socios) {
-			System.out.println("--------------------");
-			System.out.println(a);
-		}
-		
-		socios.sort(null);
+		Collections.sort(socios);
 		
 		for (Socio a : socios) {
 			System.out.println("--------------------");
