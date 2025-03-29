@@ -49,12 +49,26 @@ public class Vehiculo {
 		return velocidad;
 	}
 	
-	public void parar() {
+	public boolean parar() {
+		boolean parar = false;
 		
+		if (this.marcha == 0 && this.velocidad == 0) {
+			this.encendido = false;
+			parar = true;
+		}
+		
+		return parar;
 	}
 	
-	public void arrancar() {
+	public boolean arrancar() {
+		boolean arrancar = false;
 		
+		if (this.marcha <= 2 && this.velocidad == 0) {
+			this.encendido = true;
+			arrancar = true;
+		}
+		
+		return arrancar;
 	}
 	
 	public void subirMarcha() {
