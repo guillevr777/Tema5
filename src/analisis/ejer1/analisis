@@ -19,10 +19,10 @@ class Vehiculo
 	
 	setColor(String)
 	
-	+ void parar()
-	+ void arrancar()
-	+ void subirMarcha()
-	+ void bajarMarcha()
+	+ boolean parar()
+	+ boolean arrancar()
+	+ boolean subirMarcha()
+	+ boolean bajarMarcha()
 	+ boolean acelerar(int velocidad)
 	+ boolean frenar(int velocidad)
 	
