@@ -22,4 +22,9 @@ public class Motocicleta extends Vehiculo{
 		
 		return necesita;
 	}
+	
+	@Override
+	public String toString () {
+		return super.toString() + "\nCilindrada : " + this.cilindrada;
+	}
 }

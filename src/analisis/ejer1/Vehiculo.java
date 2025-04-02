@@ -63,7 +63,7 @@ public class Vehiculo {
 	public boolean arrancar() {
 		boolean arrancar = false;
 		
-		if (this.marcha <= 2 && this.velocidad == 0) {
+		if (this.marcha <= 2 && this.velocidad == 0 && this.encendido != true) {
 			this.encendido = true;
 			arrancar = true;
 		}
@@ -72,22 +72,87 @@ public class Vehiculo {
 	}
 	
 	public void subirMarcha() {
-		
+		this.marcha++;
 	}
 	
 	public void bajarMarcha() {
-		
+		this.marcha--;
 	}
 	
 	public boolean acelerar(int velocidad) {
 		boolean acelerar = false;
 		
+		if(this.velocidad < velocidad && this.encendido) {
+			acelerar = true;
+			
+			while(this.velocidad < velocidad) {
+				
+				this.velocidad += 10;
+				System.out.println(this.velocidad);
+				
+				if(this.velocidad >=0 && this.velocidad<30 && marcha<1) {
+					subirMarcha();
+					System.out.println("Cambio de marcha: " + this.marcha);
+				} else if(this.velocidad >=30 && this.velocidad<50 && marcha<2) {
+					subirMarcha();
+					System.out.println("Cambio de marcha: " + this.marcha);
+				} else if(this.velocidad >=50 && this.velocidad<70 && marcha<3) {
+					subirMarcha();
+					System.out.println("Cambio de marcha: " + this.marcha);
+				}  else if(this.velocidad >=70 && this.velocidad<100 && marcha<4) {
+					subirMarcha();
+					System.out.println("Cambio de marcha: " + this.marcha);
+				}  else if (this.velocidad >=100 && marcha<5) {
+					subirMarcha();
+					System.out.println("Cambio de marcha: " + this.marcha);
+				}
+			}
+		}
+		
 		return acelerar;
+	}
+	
+	public boolean desacelerar(int velocidad) {
+		boolean desacelerar = false;
+		
+		if(this.velocidad > velocidad) {
+			desacelerar = true;
+			
+			while(this.velocidad > velocidad) {
+				
+				this.velocidad -= 10;
+				System.out.println(this.velocidad);
+				
+				if(this.velocidad >=0 && this.velocidad<30 && marcha<1) {
+					bajarMarcha();
+					System.out.println("Cambio de marcha: " + this.marcha);
+				} else if(this.velocidad >=30 && this.velocidad<50 && marcha<2) {
+					bajarMarcha();
+					System.out.println("Cambio de marcha: " + this.marcha);
+				} else if(this.velocidad >=50 && this.velocidad<70 && marcha<3) {
+					bajarMarcha();
+					System.out.println("Cambio de marcha: " + this.marcha);
+				}  else if(this.velocidad >=70 && this.velocidad<100 && marcha<4) {
+					bajarMarcha();
+					System.out.println("Cambio de marcha: " + this.marcha);
+				}  else if (this.velocidad >=100 && marcha<5) {
+					bajarMarcha();
+					System.out.println("Cambio de marcha: " + this.marcha);
+				}
+			}
+		}
+		
+		return desacelerar;
 	}
 	
 	public boolean frenar(int velocidad) {
 		boolean frenar = false;
 		
 		return frenar;
+	}
+	
+	@Override
+	public String toString () {
+		return this.marca + " " + this.modelo + " " + this.matricula + "\nEncendido : " + this.encendido + " " + this.marcha + " " + this.velocidad;
 	}
 }

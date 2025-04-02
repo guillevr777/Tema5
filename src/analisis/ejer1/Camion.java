@@ -22,4 +22,9 @@ public class Camion extends Vehiculo{
 	public void setMercanciaPeligrosa (boolean mercanciaPeligrosa) {
 		this.mercanciaPeligrosa = mercanciaPeligrosa;
 	}
+	
+	@Override
+	public String toString () {
+		return super.toString() + "\nMercancia Peligrosa : " + this.mercanciaPeligrosa + " Peso Maximo : " + this.pesoMaximo;
+	}
 }

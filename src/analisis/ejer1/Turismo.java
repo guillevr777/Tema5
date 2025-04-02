@@ -34,4 +34,9 @@ public class Turismo extends Vehiculo{
 	public void setUso(TipoUso uso) {
 		this.uso = uso;
 	}
+	
+	@Override
+	public String toString () {
+		return super.toString() + "\nNumero asientos : " + this.numAsientos + " Uso : " + this.uso;
+	}
 }
