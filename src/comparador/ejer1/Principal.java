@@ -1,25 +1,28 @@
 package comparador.ejer1;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 public class Principal {
 
 	public static void main(String[] args) {
+		Integer[] numeros = new Integer[20];
 		
-		Random random = new Random();
-
-		ArrayList lista = new ArrayList();
+		Random rand = new Random();
 		
-		int numero;
-		
-		for (int i = 0 ; i < 20 ; i++) {
-			numero = random.nextInt(0,101);
-			lista.add(numero);
+		for(int i=0; i<numeros.length; i++) {
+			numeros[i] = rand.nextInt(1, 101);
 		}
+
+		System.out.println(Arrays.toString(numeros));
 		
-		lista.sort(null);
-		System.out.println(lista);
+		Arrays.sort(numeros);
+		System.out.println(Arrays.toString(numeros));
+		
+		Arrays.sort(numeros, new Numeros());
+		System.out.println(Arrays.toString(numeros));
+		
 	}
 
 }

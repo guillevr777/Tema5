@@ -20,23 +20,21 @@ public class Principal {
 		socios.add(otro4);
 		socios.add(otro3);
 		socios.add(otro5);
+				
+		socios.sort(Socio.compararPorNombre);
 		
-		comparador(otro1,otro2);
-		
-		Collections.sort(socios);
-		
+		System.out.println("Ordenado por edades");
 		for (Socio a : socios) {
 			System.out.println("--------------------");
 			System.out.println(a);
 		}
-	}
-	static void comparador (Socio otro1, Socio otro2) {
-		if (otro1.compareTo(otro2) > 0) {
-			System.out.println("El id es mayor");
-		} else if (otro1.compareTo(otro2) < 0) {
-			System.out.println("El id es menor");
-		} else {
-			System.out.println("El id es igiuak");
+		
+		socios.sort(Socio.compararPorEdad);
+
+		System.out.println("\nOrdenado por nombres");
+		for (Socio a : socios) {
+			System.out.println("--------------------");
+			System.out.println(a);
 		}
 	}
 }
