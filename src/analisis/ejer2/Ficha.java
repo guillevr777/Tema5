@@ -1,6 +1,6 @@
-package comparador.ejercuatro;
+package analisis.ejer2;
 
-public abstract class Ficha implements Comparable<Ficha> {
+public abstract class Ficha {
 	
 	private int id;
 	private String titulo;
@@ -22,10 +22,5 @@ public abstract class Ficha implements Comparable<Ficha> {
 	
 	public String toString() {
 		return "ID:" + this.id + " TITULO:" + this.titulo;
-	}
-	
-	@Override
-	public int compareTo (Ficha a) {
-		return Integer.compare(this.id, a.id);
 	}
 }

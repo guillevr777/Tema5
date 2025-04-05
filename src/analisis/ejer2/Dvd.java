@@ -1,4 +1,4 @@
-package comparador.ejercuatro;
+package analisis.ejer2;
 
 public class Dvd extends Ficha {
 	

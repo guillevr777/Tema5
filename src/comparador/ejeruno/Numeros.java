@@ -1,4 +1,4 @@
-package comparador.ejer1;
+package comparador.ejeruno;
 
 import java.util.Comparator;
 
