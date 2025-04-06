@@ -1,0 +1,77 @@
+class CuentaBancaria
+	private int numCuenta
+	protected double saldo
+	private List<Titular> titulares (1 min, 3 max)
+	
+	----------------------------------------------------
+	
+	public CuentaBancaria(numCuenta, titular)
+	
+	-----------------------------------------------------
+	
+	public boolean ingresar(double saldo)
+	
+	public boolean retirar(double saldo)
+	
+	public boolean anyadirTitular(titular)
+	
+	public boolean borrarTitular(titular)
+
+
+class Titular
+	private String dni
+	private String nombre
+	private String apellidos
+	private int telefono
+	
+	-----------------------------------------------------
+	
+	public Titular(dni, nombre, apellidos, telefono)
+	
+	-----------------------------------------------------
+
+
+class Transaccion
+	private int dia
+	private int mes
+	private int anyo
+	private String concepto
+	private double importe
+	
+	public Transaccion(dia, mes, anyo, concepto, importe)
+	
+	-----------------------------------------------------
+
+
+class CuentaAhorro extends CuentaBancaria
+	private double cuotaMant
+	private double interesAnual
+	
+	----------------------------------------------------
+
+	public CuentaAhorro(numCuenta, titular, cuotaMant, interesAnual)
+	
+	----------------------------------------------------
+
+	public double saldoNuevo()
+	
+	public double restarCuota()
+	
+	-----------------------------------------------------
+	
+	
+class CuentaCorriente extends CuentaBancaria
+	private TreeSet<Transaccion> transacciones
+	private int porcentajeCobrado
+	private int numTransacciones
+
+	----------------------------------------------------
+
+	public CuentaCorriente(numCuenta, titular, porcentajeCobrado)
+	
+	----------------------------------------------------
+
+	public boolean nuevaTransaccion(Transaccion transacc)
+	
+	-----------------------------------------------------
+	
