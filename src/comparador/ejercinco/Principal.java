@@ -1,5 +1,10 @@
 package comparador.ejercinco;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class Principal {
 
 	public static void main(String[]args) {
@@ -16,5 +21,6 @@ public class Principal {
 		System.out.println(cuent2);
 		//System.out.println();
 		//cuent2.transacciones();
+
 	}
 }

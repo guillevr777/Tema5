@@ -4,12 +4,12 @@ public class Titular implements Comparable<Titular>{
 
 	private String dni;
 	private String nombre;
-	private String apellidos;
+	private String apellido;
 	private int telefono;
 	
 	public Titular (String dni, String nombre, String apellido, int telefono) {
 		this.dni = dni;
-		this.apellidos = apellidos;
+		this.apellido = apellido;
 		this.nombre = nombre;
 		this.telefono = telefono;
 	}
@@ -18,6 +18,14 @@ public class Titular implements Comparable<Titular>{
 		return this.dni;
 	}
 	
+	public String getNombre() {
+		return nombre;
+	}
+
+	public String getApellido() {
+		return apellido;
+	}
+
 	@Override
 	public String toString () {
 		String frase;

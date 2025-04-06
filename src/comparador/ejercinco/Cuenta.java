@@ -1,8 +1,9 @@
 package comparador.ejercinco;
 
+import java.util.Comparator;
 import java.util.TreeSet;
 
-public class Cuenta {
+public class Cuenta implements Comparator<Cuenta>{
 
 	private int numCuenta;
 	protected double saldo;
@@ -68,5 +69,10 @@ public class Cuenta {
 		frase = "NºCuenta:" + this.numCuenta + "\tSaldo:" + this.saldo;
 		
 		return frase;
+	}
+
+	@Override
+	public int compare(Cuenta o1, Cuenta o2) {
+		return Integer.compare(o1.numCuenta, o2.numCuenta);
 	}
 }
