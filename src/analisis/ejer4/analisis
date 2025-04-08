@@ -1,0 +1,16 @@
+class Agenda
+
+	-String nombre
+	-int telefono
+
+class Persona implements Agenda
+
+	-String cumpleaños
+	
+	+String toString
+	
+class Empresa implements Agenda
+
+	-String paginaWeb
+	
+	+String toString
