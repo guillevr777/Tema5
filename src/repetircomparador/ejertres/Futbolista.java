@@ -1,4 +1,4 @@
-package comparador.ejertres;
+package repetircomparador.ejertres;
 
 import java.util.Comparator;
 
