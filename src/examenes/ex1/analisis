@@ -1,0 +1,84 @@
+	class Volumen <<interface>>
+	
+	+ boolean subirVolumen()
+	+ boolean bajarVolumen()
+	+ void mostrarVolumen()
+	
+	class Velocidad <<interface>>
+	
+	+ boolean subirVelocidad()
+	+ boolean bajarVelocidad()
+	+ void mostrarVelocidad()	
+	
+	class Mando implements Comparable<Mando>
+	
+		- String modelo
+		- double anchura
+		- double altura
+		- double precio
+		- boolean encendido
+		
+		+ Mando(modelo, anchura, altura, precio, encendido)
+		
+		+ boolean encender()
+		
+		+ boolean equals()
+		+ String toString()
+		+ int ordenAlfabetico()
+		
+	class Television extendends Mando implements Volumen
+	
+		- int volumen (5 en 5)
+		- int canal	
+		
+		+ Television(volumen, canal, modelo, anchura, altura, precio, encendido)
+		
+		+ boolean cambiarCanal()
+		Heredados:
+			+ boolean subirVolumen()
+			+ boolean bajarVolumen()
+			
+		+ String toString()
+		
+		
+	class Minicadena extends Mando implements Volumen
+	
+		- int volumen (10 en 10)
+		
+		+ Minicadena(volumen, modelo, anchura, altura, precio, encendido)
+		
+		Heredados:
+			+ boolean subirVolumen()
+			+ boolean bajarVolumen()
+			
+		+ String toString()
+	
+	class Aspiradora extends Mando implements Velocidad
+	
+		- int velocidad = 0 (0-3) (1 en 1)
+		
+		+ Aspiradora(modelo, anchura, altura, precio, encendido)
+		Heredados:
+			+ boolean subirVelocidad()
+			+ boolean bajarVelocidad()
+			
+		+ String toString()
+		
+	class AireAcondicionado extends Mando implements Velocidad
+		
+		enum Modo { FRIO, CALOR}
+		
+		- Modo modo = FRIO
+		- double temperatura
+		- int velocidad = 0 (0-5) (1 en 1)
+		
+		+ AireAcondicionado(temperatura, modelo, anchura, altura, precio, encendido)
+		
+		+ boolean cambiarModo()
+		+ boolean cambiarTemperatura()
+		Heredados:
+			+ boolean subirVelocidad()
+			+ boolean bajarVelocidad()
+			
+		+ String toString()
+	
