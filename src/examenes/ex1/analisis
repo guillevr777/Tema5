@@ -18,7 +18,7 @@
 		- double precio
 		- boolean encendido
 		
-		+ Mando(modelo, anchura, altura, precio, encendido)
+		+ Mando(modelo, anchura, altura, precio)
 		
 		+ boolean encender()
 		
@@ -31,7 +31,7 @@
 		- int volumen (5 en 5)
 		- int canal	
 		
-		+ Television(volumen, canal, modelo, anchura, altura, precio, encendido)
+		+ Television(modelo, anchura, altura, precio)
 		
 		+ boolean cambiarCanal()
 		Heredados:
@@ -45,7 +45,7 @@
 	
 		- int volumen (10 en 10)
 		
-		+ Minicadena(volumen, modelo, anchura, altura, precio, encendido)
+		+ Minicadena(modelo, anchura, altura, precio)
 		
 		Heredados:
 			+ boolean subirVolumen()
@@ -57,7 +57,7 @@
 	
 		- int velocidad = 0 (0-3) (1 en 1)
 		
-		+ Aspiradora(modelo, anchura, altura, precio, encendido)
+		+ Aspiradora(modelo, anchura, altura, precio)
 		Heredados:
 			+ boolean subirVelocidad()
 			+ boolean bajarVelocidad()
@@ -72,7 +72,7 @@
 		- double temperatura
 		- int velocidad = 0 (0-5) (1 en 1)
 		
-		+ AireAcondicionado(temperatura, modelo, anchura, altura, precio, encendido)
+		+ AireAcondicionado(modelo, anchura, altura, precio)
 		
 		+ boolean cambiarModo()
 		+ boolean cambiarTemperatura()

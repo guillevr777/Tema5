@@ -6,7 +6,7 @@ public class AireAcondicionado extends Mando implements Velocidad {
 		FRIO,CALIENTE
 	}
 	
-	private Modo modo;
+	private Modo modo = Modo.FRIO;
 	private double temperatura;
 	private int velocidad = 0;
 	
