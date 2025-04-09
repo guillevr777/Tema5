@@ -10,7 +10,7 @@ public class AireAcondicionado extends Mando implements Velocidad {
 	private double temperatura;
 	private int velocidad = 0;
 	
-	public AireAcondicionado(String modelo, double anchura, double altura, double precio) {
+	public AireAcondicionado(String modelo, double anchura, double altura, double precio) throws ModeloException, PrecioException {
 		super(modelo, anchura, altura, precio);
 	}
 

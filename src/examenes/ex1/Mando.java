@@ -8,11 +8,29 @@ public class Mando implements Comparable<Mando>{
 	private double precio;
 	private boolean encendido = false;
 	
-	public Mando(String modelo, double anchura, double altura, double precio) {
-		this.modelo = modelo;
-		this.anchura = anchura;
-		this.altura = altura;
-		this.precio = precio;
+	public Mando(String modelo, double anchura, double altura) throws ModeloException {
+		if (modelo != null && !modelo.isBlank()) {
+			this.modelo = modelo;
+		} else {
+			throw new ModeloException();
+		}
+			this.anchura = anchura;
+			this.altura = altura;
+	}
+	
+	public Mando(String modelo, double anchura, double altura, double precio) throws ModeloException, PrecioException {
+		if (modelo != null && !modelo.isBlank()) {
+			this.modelo = modelo;
+		} else {
+			throw new ModeloException();
+		}
+			this.anchura = anchura;
+			this.altura = altura;
+		if (precio > 0) {
+			this.precio = precio;
+		} else {
+			throw new PrecioException();
+		}
 	}
 
 	public boolean isEncendido() {

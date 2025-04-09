@@ -5,7 +5,7 @@ public class Television extends Mando implements Volumen{
 	private int volumen;
 	private int canal;	
 	
-	public Television(String modelo, double anchura, double altura, double precio) {
+	public Television(String modelo, double anchura, double altura, double precio) throws ModeloException, PrecioException {
 		super(modelo, anchura, altura, precio);
 	}
 

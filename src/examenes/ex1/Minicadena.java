@@ -4,7 +4,7 @@ public class Minicadena extends Mando implements Volumen{
 
 	private int volumen;
 	
-	public Minicadena(String modelo, double anchura, double altura, double precio) {
+	public Minicadena(String modelo, double anchura, double altura, double precio) throws ModeloException, PrecioException {
 		super(modelo, anchura, altura, precio);
 	}
 

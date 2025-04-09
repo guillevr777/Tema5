@@ -4,7 +4,7 @@ public class Aspiradora extends Mando implements Velocidad{
 
 	private int velocidad = 0;
 	
-	public Aspiradora(String modelo, double anchura, double altura, double precio) {
+	public Aspiradora(String modelo, double anchura, double altura, double precio) throws ModeloException, PrecioException {
 		super(modelo, anchura, altura, precio);
 	}
 

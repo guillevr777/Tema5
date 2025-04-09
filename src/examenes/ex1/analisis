@@ -1,14 +1,16 @@
-	class Volumen <<interface>>
+	Volumen <<interface>>
 	
 	+ boolean subirVolumen()
 	+ boolean bajarVolumen()
 	+ void mostrarVolumen()
 	
-	class Velocidad <<interface>>
+	Velocidad <<interface>>
 	
 	+ boolean subirVelocidad()
 	+ boolean bajarVelocidad()
 	+ void mostrarVelocidad()	
+	
+	class ModeloException extends Exception
 	
 	class Mando implements Comparable<Mando>
 	
@@ -18,7 +20,7 @@
 		- double precio
 		- boolean encendido
 		
-		+ Mando(modelo, anchura, altura, precio)
+		+ Mando(modelo, anchura, altura, precio) throws ModeloException
 		
 		+ boolean encender()
 		
