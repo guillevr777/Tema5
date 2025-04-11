@@ -1,6 +1,6 @@
 package excepciones.ejeruno;
 
-public class HoraException {
+public class HoraException extends Exception{
 
 	
 }

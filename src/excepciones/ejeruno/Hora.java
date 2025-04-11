@@ -10,11 +10,11 @@ public class Hora {
 	public Hora (int segundo) {
 		this.segundo = segundo;
 	}
-	public Hora (int hora, int minuto, int segundo) implements HoraException {
+	public Hora (int hora, int minuto, int segundo) throws HoraException {
 		if (hora >= 0 || hora <= 23) {
 			this.hora = hora;
 		} else {
-			throws new HoraException();
+			throw new HoraException();
 		}
 			this.minuto = minuto;
 			this.segundo = segundo;
